@@ -9,6 +9,7 @@ import About from "../src/components/about/About";
 import Contact from "../src/components/contact/Contact";
 import Home from "../src/components/home/Home";
 import Header from "../src/components/Header/Header";
+import Recipies from "../src/components/recipies/recipies";
 
 // function App() {
 //   return (
@@ -29,6 +30,7 @@ const App = () => {
             <Redirect to="/home" />
           </Route>
           <Route path="/home" exact component={Home} />
+          <Route path="/recipies" exact component={Recipies} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Switch>
