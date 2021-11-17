@@ -4,7 +4,7 @@ import { NavTypeWrap, Navtype } from "../../common-types/types";
 
 const Navbar = (props: NavTypeWrap) => {
   const propData: Navtype[] = props.navData;
-  const currentState = propData.map(function (ele: any, i: any) {
+  const navItem = propData.map(function (ele: Navtype, i: any) {
     return (
       <div className="nav-item" key={i}>
         <Link to={ele.path}>{ele.title}</Link>
@@ -14,7 +14,7 @@ const Navbar = (props: NavTypeWrap) => {
   return (
     <div>
       <nav className="navbar">
-        <div className="navbarConatiner">{currentState}</div>
+        <div className="navbarConatiner">{navItem}</div>
       </nav>
     </div>
   );
