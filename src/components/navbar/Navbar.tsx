@@ -1,24 +1,20 @@
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import { NavTypeWrap, Navtype } from "../../common-types/types";
 
-const Navbar = () => {
+const Navbar = (props: NavTypeWrap) => {
+  const propData: Navtype[] = props.navData;
+  const currentState = propData.map(function (ele: any, i: any) {
+    return (
+      <div className="nav-item" key={i}>
+        <Link to={ele.path}>{ele.title}</Link>
+      </div>
+    );
+  });
   return (
     <div>
       <nav className="navbar">
-        <div className="navbarConatiner">
-          <div className="nav-item">
-            <Link to="/home">Home</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/recipies">Recipies</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/about">About</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/contact">Contact</Link>
-          </div>
-        </div>
+        <div className="navbarConatiner">{currentState}</div>
       </nav>
     </div>
   );

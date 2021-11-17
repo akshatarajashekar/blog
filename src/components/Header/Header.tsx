@@ -1,6 +1,12 @@
 import { FC } from "react";
 import Navbar from "../navbar/Navbar";
 import "./Header.scss";
+import { data } from "./navdata";
+import { NavTypeWrap } from "../../common-types/types";
+
+const navBarProps: NavTypeWrap = {
+  navData: data,
+};
 
 const Header: FC = () => (
   <div className={"flexbox"}>
@@ -10,7 +16,7 @@ const Header: FC = () => (
     </div>
     <div className={"flexbox__flex"}></div>
     <div className={"flexbox__end-justify"}>
-      <Navbar />
+      <Navbar {...navBarProps} />
     </div>
   </div>
 );
