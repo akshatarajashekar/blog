@@ -1,4 +1,4 @@
 import { FC } from 'react'
 
-const Contact: FC = () => <h1>Hello, World!</h1>
+const Contact: FC = () =><div>Contact</div>
 export default Contact

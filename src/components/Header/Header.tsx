@@ -4,10 +4,13 @@ import "./Header.scss";
 
 const Header: FC = () => (
   <div className={"flexbox"}>
-    <div className={"logoStyle"}>Blog</div>
+    <div className={"logoStyle"}>
+      Blog
+      {/* <Route path="/hello" component={Home} /> */}
+    </div>
     <div className={"flexbox__flex"}></div>
     <div className={"flexbox__end-justify"}>
-      <Navbar/>
+      <Navbar />
     </div>
   </div>
 );
