@@ -1,1 +1,14 @@
 @import "variables";
+
+.flexbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  
+  &__end-justify {
+    justify-content: flex-end;
+  }
+  &__flex {
+    flex: 1 1 0%;
+  }
+}

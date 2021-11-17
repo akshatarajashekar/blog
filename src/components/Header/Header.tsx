@@ -1,4 +1,14 @@
-import { FC } from 'react'
+import { FC } from "react";
+import Navbar from "../navbar/Navbar";
+import "./Header.scss";
 
-const Header: FC = () => <h1>Hello, World!</h1>
-export default Header
+const Header: FC = () => (
+  <div className={"flexbox"}>
+    <div className={"logoStyle"}>Blog</div>
+    <div className={"flexbox__flex"}></div>
+    <div className={"flexbox__end-justify"}>
+      <Navbar/>
+    </div>
+  </div>
+);
+export default Header;
