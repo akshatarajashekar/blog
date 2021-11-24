@@ -1,3 +1,4 @@
 import { FC } from "react";
-const Home: FC = () => <div></div>;
+import FeaturedRecipies from "./featured/featuredRecipies";
+const Home: FC = () => <div><FeaturedRecipies/></div>;
 export default Home;
