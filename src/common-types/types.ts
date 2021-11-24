@@ -1,7 +1,7 @@
 export interface Navtype {
-  title: String;
-  path: String;
-  component: String;
+  title: string;
+  path: string;
+  component: string;
 }
 
 export interface NavTypeWrap {

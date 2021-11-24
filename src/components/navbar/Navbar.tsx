@@ -3,22 +3,19 @@ import "./navbar.scss";
 import { NavTypeWrap, Navtype } from "../../common-types/types";
 import { setNavItem } from "../header/headerReducer";
 import { useAppDispatch } from "../../hooks";
-import { useAppSelector } from "../../hooks";
+// import { useAppSelector } from "../../hooks";
 
 const Navbar = (props: NavTypeWrap) => {
   const propData: Navtype[] = props.navData;
   const dispatch = useAppDispatch();
-  const count = useAppSelector((state) => state.headerStore.selectedNavItem);
-  
-  const onClickEvent = () => {
-    console.log('here');
-    dispatch(setNavItem("asd"));
-    
-  console.log(count, "count");
+  // const count = useAppSelector((state) => state.headerStore.selectedNavItem);
+
+  const onClickEvent = (item: string) => {
+    dispatch(setNavItem(item));    
   };
   const navItem = propData.map(function (ele: Navtype, i: any) {
     return (
-      <div className="nav-item" key={i} onClick={() => onClickEvent}>
+      <div className="nav-item" key={i} onClick={(event: React.MouseEvent) => onClickEvent(ele.title)}>
         <Link to={ele.path}>{ele.title}</Link>
       </div>
     );
