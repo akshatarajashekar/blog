@@ -1,5 +1,5 @@
 import Navbar from "../navbar/Navbar";
-import "./Header.scss";
+import "./header.scss";
 import { data } from "./navdata";
 import { NavTypeWrap } from "../../common-types/types";
 // import { useAppSelector } from "../../hooks";
