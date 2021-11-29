@@ -1,5 +1,6 @@
-.featured {
+.cardListPane {
   &__headerFont {
+    width: 13%;
     font-size: 24px;
     font-weight: 200;
     font-style: italic;
@@ -7,8 +8,8 @@
   &__headerStyle {
     width: 100%;
     margin-left: 20px;
-    margin-top: 7px;
+    margin-top: 10px;
     height: 20px;
-    background-color: #814e4e;
+    background-color: black;
   }
 }
