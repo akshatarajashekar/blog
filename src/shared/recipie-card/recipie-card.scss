@@ -1,0 +1,14 @@
+.recipieCard {
+  width: 290px;
+  display: inline-block;
+    &__container {
+    width: 250px;
+    margin: 20px 10px 0 10px;
+    height: 250px;
+    display: inline-block;
+    background-color: black;
+  }
+  &__title {
+    text-align: center;
+  }
+}

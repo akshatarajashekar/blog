@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import About from "../components/about/about";
 import Contact from "../components/contact/contact";
-import Home from "../components/home/home";
+import Home from "../components/home/Home";
 import Recipies from "../components/recipies/recipies";
 const RouterIndex: FC = () => (
   <div>
