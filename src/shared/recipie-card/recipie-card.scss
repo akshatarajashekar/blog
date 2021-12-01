@@ -1,14 +1,18 @@
 .recipieCard {
-  width: 290px;
   display: inline-block;
-    &__container {
+  &__container {
+    background-size: cover;
+    padding: 10px;
+    background-repeat: no-repeat;
     width: 250px;
     margin: 20px 10px 0 10px;
     height: 250px;
     display: inline-block;
     background-color: black;
+    cursor: pointer;
   }
   &__title {
     text-align: center;
+    text-transform: capitalize;
   }
 }

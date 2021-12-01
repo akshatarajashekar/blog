@@ -1,3 +1,4 @@
-export interface recpipeCardtType {
+export interface recpipeCardType {
   title: string;
+  image: string;
 }
