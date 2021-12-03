@@ -17,7 +17,7 @@ const Header = () => {
         {/* <Route path="/hello" component={Home} /> */}
       </div>
       <div className={"flexbox__flex"}></div>
-      <div className={"flexbox__end-justify"}>
+      <div className={"flexbox__end-justify navbar_container"}>
         <Navbar {...navBarProps} />
       </div>
     </div>
