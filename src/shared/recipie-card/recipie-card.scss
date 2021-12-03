@@ -11,6 +11,10 @@
     background-color: black;
     cursor: pointer;
   }
+  &__container:hover {
+    opacity: 0.6;
+  }
+
   &__title {
     text-align: center;
     text-transform: capitalize;
