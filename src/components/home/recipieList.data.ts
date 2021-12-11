@@ -2,16 +2,28 @@ import { RecipieListType } from "./types";
 
 export const latestRecipieList: RecipieListType[] = [
   {
-    title: "burger",
+    title: "Burger",
     imgPath: "burger.jpg",
   },
   {
-    title: "cake",
+    title: "Cake",
     imgPath: "cake.jpg",
   },
   {
-    title: "bruschetta",
+    title: "Bruschetta",
     imgPath: "bruschetta.jpg",
+  },
+  {
+    title: "Pizza",
+    imgPath: "pizza.jpg",
+  },
+  {
+    title: "Hash Brown",
+    imgPath: "hashbrown.jpg",
+  },
+  {
+    title: "Tiramisu",
+    imgPath: "tiramisu.jpg",
   },
 ];
 
