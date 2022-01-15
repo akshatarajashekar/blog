@@ -21,7 +21,6 @@ const cssPrefix = 'carousel';
 const CarouselRecipieSlider = (props: CarouselListPropType) => {
   const slides = props.slides;
   const carouselListLength: number = props.data.length;
-  let carouselRightIndexNumber: number = 0;
   const initialDataList = props.data.slice(0, slides);
   const [displayItemList, setInput] = useState<CarouselListType[]>(initialDataList);
   const [carouselLeftIndexNumber, setCarouselInput] = useState<number>(1);
@@ -33,11 +32,14 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
       for (let i = carouselLeftIndexNumber; i < (carouselLeftIndexNumber + slides); i++) {
         if (i === carouselListLength) {
           listOfItems = [...listOfItems, ...[tempDataList[carouselListLength - i]]];
+          console.log(carouselListLength - i, 'first');
         } else if (i > carouselListLength - 1) {
           flag = true;
           listOfItems = [...listOfItems, ...[tempDataList[i - carouselListLength]]];
+          console.log(i - carouselListLength, 'second');
         } else {
           listOfItems = [...listOfItems, ...[tempDataList[i]]];
+          console.log(i, 'second');
         }
       }
       if(flag) {
@@ -57,11 +59,14 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
         const neededIndex = index - i - 1;
         if (neededIndex < 0) {
           flag = true;
-          listOfItems = [ ...[tempDataList[carouselListLength - 1]], ...listOfItems];
+          listOfItems = [ ...[tempDataList[carouselListLength - i + 1]], ...listOfItems];
+          console.log(carouselListLength - 1 - i, 'first', neededIndex);
         } else  if (neededIndex === carouselListLength) {
           listOfItems = [...[tempDataList[0]], ...listOfItems];
+          console.log(0, 'second');
         } else {
           listOfItems = [...[tempDataList[neededIndex]], ...listOfItems];
+          console.log(neededIndex, 'second');
         }
       }
       setCarouselInput(carouselLeftIndexNumber -  1);
