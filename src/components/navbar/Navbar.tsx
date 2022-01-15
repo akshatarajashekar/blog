@@ -13,7 +13,7 @@ const Navbar = (props: NavTypeWrap) => {
   const onClickEvent = (item: string) => {
     dispatch(setNavItem(item));    
   };
-  const navItem = propData.map(function (ele: Navtype, i: any) {
+  const navItem = propData.map((ele: Navtype, i: any) => {
     return (
       <div className="nav-item" key={i} onClick={(event: React.MouseEvent) => onClickEvent(ele.title)}>
         <Link to={ele.path}>{ele.title}</Link>

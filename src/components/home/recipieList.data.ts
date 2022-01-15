@@ -1,6 +1,6 @@
-import { RecipieListType } from "./types";
+import { CarouselListType } from "../../shared/common-type";
 
-export const latestRecipieList: RecipieListType[] = [
+export const latestRecipieList: CarouselListType[] = [
   {
     title: "Burger",
     imgPath: "burger.jpg",
@@ -27,7 +27,7 @@ export const latestRecipieList: RecipieListType[] = [
   },
 ];
 
-export const featuredRecipieList: RecipieListType[] = [
+export const featuredRecipieList: CarouselListType[] = [
   {
     title: "burger",
     imgPath: "burger.jpg",
