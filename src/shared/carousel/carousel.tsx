@@ -7,7 +7,6 @@ import { CarouselListType, CarouselListPropType } from '../common-type';
 import { useState } from 'react';
 
 const ContainerStyle = styled.div`
-  width: 800px;
   display: flex;
   overflow: hidden;
 `;
@@ -17,12 +16,13 @@ const ArrowContainer = styled.div`
   cursor: pointer;
   padding: 10px;
 `;
+
 const cssPrefix = 'carousel';
 const CarouselRecipieSlider = (props: CarouselListPropType) => {
   const slides = props.slides;
   const carouselListLength: number = props.data.length;
   let carouselRightIndexNumber: number = 0;
-  const initialDataList = props.data;
+  const initialDataList = props.data.slice(0, slides);
   const [displayItemList, setInput] = useState<CarouselListType[]>(initialDataList);
   const [carouselLeftIndexNumber, setCarouselInput] = useState<number>(1);
   
@@ -49,17 +49,27 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
   };
   
   const onClickLeftEvent = () => {
-    if (carouselRightIndexNumber === 0) {
-      carouselRightIndexNumber = carouselListLength - 1;
-    } else {
-      carouselRightIndexNumber = carouselRightIndexNumber - 1;
-    }
+    let listOfItems: CarouselListType[] = [];
     const tempDataList = [...props.data];
-    for (let i = carouselRightIndexNumber; i < carouselRightIndexNumber + 2; i++) {
-
-    }
-    const listOfItems = [...[tempDataList[carouselRightIndexNumber]], ...[tempDataList[carouselRightIndexNumber - 1]], ...[tempDataList[carouselRightIndexNumber - 2]]];
-    console.log(listOfItems, carouselRightIndexNumber);
+      let flag = false;
+      for (let i = 0; i < (slides); i ++) {
+        const index = carouselLeftIndexNumber + 1;
+        const neededIndex = index - i - 1;
+        if (neededIndex < 0) {
+          flag = true;
+          listOfItems = [ ...[tempDataList[carouselListLength - 1]], ...listOfItems];
+        } else  if (neededIndex === carouselListLength) {
+          listOfItems = [...[tempDataList[0]], ...listOfItems];
+        } else {
+          listOfItems = [...[tempDataList[neededIndex]], ...listOfItems];
+        }
+      }
+      setCarouselInput(carouselLeftIndexNumber -  1);
+      if(flag) {
+        setCarouselInput(carouselListLength);
+      } else {
+        setCarouselInput(carouselLeftIndexNumber - 1);
+      }
     setInput(listOfItems);
   };
 
@@ -69,11 +79,12 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
 
   return (
     <div className={`${cssPrefix}`}>
+      <ArrowContainer onClick={() => onClickLeftEvent()}><FaArrowLeft/></ArrowContainer>
       <ContainerStyle>
         {itemList}
       </ContainerStyle>
       <ArrowContainer onClick={() => onClickRightEvent()}><FaArrowRight/></ArrowContainer>
-      <ArrowContainer onClick={() => onClickLeftEvent()}><FaArrowLeft/></ArrowContainer>
+      
 
       
     </div>);

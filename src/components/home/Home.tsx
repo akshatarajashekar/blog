@@ -11,9 +11,10 @@ const Home: FC = () => (
   <div>
     <ScrollBar>
       <CardListPane title="Latest Recipies" />
-      {latestRecipieList.map((ele: CarouselListType, i: any) => {
+      {/* {latestRecipieList.map((ele: CarouselListType, i: any) => {
         return <RecipieCard title={ele.title} image={ele.imgPath} key={i} />;
-      })}
+      })} */}
+      <CarouselRecipieSlider data={latestRecipieList} slides={4}></CarouselRecipieSlider>
       <Button content="SHOW MORE"></Button>
       <CarouselRecipieSlider data={latestRecipieList} slides={3}></CarouselRecipieSlider>
       {/* <CardListPane title="Features" />
