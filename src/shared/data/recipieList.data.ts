@@ -1,4 +1,4 @@
-import { CarouselListType } from "../../shared/common-type";
+import { CarouselListType } from "../common-type";
 
 export const latestRecipieList: CarouselListType[] = [
   {

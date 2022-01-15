@@ -8,6 +8,7 @@ const ButtonStyle = styled.div`
   padding: 4px 5px;
   font-size: 0.7em;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 const cssPrefix = "rx-button";
