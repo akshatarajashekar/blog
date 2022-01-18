@@ -1,0 +1,26 @@
+.contact {
+  &__description {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  &__container {
+    background-color: #cccccc69;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    label {
+      font-size: 13px;
+    }
+    input {
+      width: 400px;
+    }
+    textarea {
+      width: 400px;
+      height: 150px;
+    }
+    &__formrow {
+      margin-top: 15px;
+    }
+  }
+}

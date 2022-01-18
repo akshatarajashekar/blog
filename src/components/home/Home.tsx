@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <div>
       <ScrollBar>
-        <CardListPane title={""} skewLine={false} />
+        
         <div className={`${cssPrefix}__weekOfRecipie_container`}>
           <div
             className={`${cssPrefix}__weekOfRecipie_background`}
