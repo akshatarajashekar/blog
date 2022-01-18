@@ -11,7 +11,7 @@ const AllReciepies = () => {
   return (
   <div className={`${cssPrefix}`}>
     <ScrollBar>
-      <CardListPane title="All Recipies" />
+      <CardListPane title="All Recipies" skewLine={true}/>
       <div className={`${cssPrefix}__container`}>
         {latestRecipieList.map((ele: CarouselListType, i: any) => {
           return <RecipieCard title={ele.title} image={ele.imgPath} key={i} />;

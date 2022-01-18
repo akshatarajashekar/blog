@@ -1,18 +1,23 @@
 .cardListPane {
-  &__headerFont {
+  &__container {
     // width: 13%;
+    height: 33px;
+  }
+  &__headerFont {
     font-size: 24px;
     font-weight: 200;
     font-style: italic;
+    padding-right: 20px;
   }
   &__headerStyle {
     margin-right: 2px;
     width: 100%;
-    margin-left: 20px;
     margin-top: 13px;
     height: 12px;
-    transform: skew(160deg);
     background-color: black;
     flex: 1 1;
-  }
+    &_skewLine {
+      transform: skew(160deg);
+    }
+  }  
 }

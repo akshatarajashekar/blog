@@ -19,7 +19,7 @@ const Home = () => {
   };
   return ( <div>
     <ScrollBar>
-      <CardListPane title="Latest Recipies" />
+      <CardListPane title={''} skewLine={false}/>
       <div className={`${cssPrefix}__weekOfRecipie_container`}>
         <div className={`${cssPrefix}__weekOfRecipie_background`} style={{backgroundImage: `url(${process.env.PUBLIC_URL + '/assets/' + weekOftheRecipie})`}}></div>
         <div className={`${cssPrefix}__weekOfRecipie_layer`}>
@@ -28,6 +28,7 @@ const Home = () => {
           <div className={`${cssPrefix}__weekOfRecipie_layer_viewMore`}>View Recipie...</div>
         </div>
       </div>
+      <CardListPane title="Latest Recipies" skewLine={true}/>
       <CarouselRecipieSlider data={latestRecipieList} slides={5}></CarouselRecipieSlider>
       <Link className={`${cssPrefix}__button_position`} onClick={(event: React.MouseEvent) => onClickEvent('all-recipies')} to={'all-recipies'}>
         <Button content="SHOW MORE" ></Button>

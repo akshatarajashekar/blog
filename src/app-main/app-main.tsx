@@ -5,12 +5,14 @@ import ScrollBar from "../shared/scroll-bar/scroll-bar";
 
 const AppMain = () => {
   return (
-    <div className="App AppContainer">
+    <div className="App">
     <ScrollBar>
+      <div className="AppContainer">
       <Router>
         <Header />
         <RouterIndex />
       </Router>
+      </div>
       </ScrollBar>
     </div>
   );
