@@ -25,6 +25,10 @@ export const latestRecipieList: CarouselListType[] = [
     title: "Tiramisu",
     imgPath: "tiramisu.jpg",
   },
+  {
+    title: "Waffle",
+    imgPath: "waffle.jpg",
+  },
 ];
 
 export const featuredRecipieList: CarouselListType[] = [

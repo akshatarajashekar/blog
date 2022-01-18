@@ -7,7 +7,7 @@ export const data: Navtype[] = [
     component: "Home",
   },
   {
-    title: "Recipies",
+    title: "All Recipies",
     path: "/all-recipies",
     component: "Recipies",
   },
