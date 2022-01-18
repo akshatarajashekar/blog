@@ -1,4 +1,7 @@
 .recipieCard {
+  &__carouselContainer {
+    padding: 0 20px 0 20px;
+  }
   &__button_position {
     display: flex;
     flex-direction: row-reverse;
@@ -10,6 +13,7 @@
     position: relative;
     width: 100%;
     height: 500px;
+    margin-top: 20px;
   }
 
   &__weekOfRecipie_background {
