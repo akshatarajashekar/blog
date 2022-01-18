@@ -6,9 +6,10 @@ const ButtonStyle = styled.div`
   height: fit-content;
   border: 2px solid black;
   padding: 4px 5px;
-  font-size: 0.7em;
-  font-weight: 500;
+  font-size: 0.75em;
+  font-weight: 450;
   cursor: pointer;
+  letter-spacing: 1px;
 `;
 
 const cssPrefix = "rx-button";

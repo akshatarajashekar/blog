@@ -8,6 +8,7 @@
     font-weight: 200;
     font-style: italic;
     padding-right: 20px;
+    padding-left: 20px;
   }
   &__headerStyle {
     margin-right: 2px;
@@ -17,7 +18,7 @@
     background-color: black;
     flex: 1 1;
     &_skewLine {
-      transform: skew(160deg);
+      // transform: skew(160deg);
     }
   }  
 }
