@@ -14,6 +14,7 @@ const AppMain = () => {
           <Header/>
           <CardListPane title={""} skewLine={false} />
           <RouterIndex />
+          <div className={"flexbox__flex"}></div>
           <Footer></Footer>
         </Router>
       </div>

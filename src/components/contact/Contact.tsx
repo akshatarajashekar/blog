@@ -10,7 +10,7 @@ const Contact = () => {
       </div>
       <div className={`${cssPrefix}__container`}>
         <form action="">
-          <div className={`${cssPrefix}__formrow`}>
+          <div className={`${cssPrefix}__formRow`}>
             <label htmlFor="fname">Your name</label><br></br>
             <input type="text" id="fname" name="fname" value="" /><br></br>
           </div>
@@ -22,7 +22,7 @@ const Contact = () => {
             <label htmlFor="fname">Email</label><br></br>
             <input type="text" id="email" name="email" value="" /><br></br>
           </div>
-          <div className={`${cssPrefix}__formrow`}>
+          <div className={`${cssPrefix}__formRow`}>
             <label htmlFor="fname">Message</label><br></br>
             <textarea id="message" name="message" value="" /><br></br>
           </div>

@@ -1,5 +1,4 @@
 import './all-recipies.scss'
-import { CardListPane } from "../../shared/cardListPane";
 import RecipieCard from "../../shared/recipie-card/recipie-card";
 import ScrollBar from "../../shared/scroll-bar/scroll-bar";
 import { latestRecipieList } from "../../shared/data/recipieList.data";
