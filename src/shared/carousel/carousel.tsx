@@ -5,6 +5,9 @@ import RecipieCard from "../recipie-card/recipie-card";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa";
 import { CarouselListType, CarouselListPropType } from "../common-type";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { setNavItem } from "../../components/header/headerReducer";
+import { useAppDispatch } from "../../hooks";
 
 const ContainerStyle = styled.div`
   display: flex;
@@ -19,6 +22,12 @@ const ArrowContainer = styled.div`
 
 const cssPrefix = "carousel";
 const CarouselRecipieSlider = (props: CarouselListPropType) => {
+
+  const dispatch = useAppDispatch();
+  const onClickEvent = (item: string) => {
+    dispatch(setNavItem(item));
+  };
+
   const slides = props.slides;
   const carouselListLength: number = props.data.length;
   const initialDataList = props.data.slice(0, slides);
@@ -100,7 +109,14 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
   const itemList = displayItemList.map((ele: CarouselListType, i: any) => {
     return (
       <div key={ele.title}>
-        <RecipieCard title={ele.title} image={ele.imgPath} />
+        <Link
+            className={`${cssPrefix}__custom_link`}
+            onClick={(event: React.MouseEvent) => onClickEvent("recipie-detail")}
+            to={"recipie-detail"}
+          >
+            <RecipieCard title={ele.title} image={ele.imgPath} />
+          </Link>
+        
       </div>
     );
   });

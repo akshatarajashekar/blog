@@ -5,6 +5,7 @@ import Contact from "../components/contact/contact";
 import Home from "../components/home/Home";
 import Recipies from "../components/recipies/recipies";
 import AllReciepies from "../components/all-recipies/all-recipies";
+import RecipieDetail from "../components/recipie-detail/recipie-detail";
 
 const RouterIndex: FC = () => (
   <div>
@@ -17,6 +18,7 @@ const RouterIndex: FC = () => (
       <Route path="/about" exact component={About} />
       <Route path="/contact"exact  component={Contact} />
       <Route path="/all-recipies" exact component={AllReciepies} />
+      <Route path="/recipie-detail" exact component={RecipieDetail}></Route>
     </Switch>
   </div>
 );
