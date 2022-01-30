@@ -1,0 +1,12 @@
+.recipie-detail {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  &__background {
+    width: 560px;
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
