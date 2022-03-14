@@ -18,7 +18,7 @@ const RouterIndex: FC = () => (
       <Route path="/about" exact component={About} />
       <Route path="/contact"exact  component={Contact} />
       <Route path="/all-recipies" exact component={AllReciepies} />
-      <Route path="/recipie-detail" exact component={RecipieDetail}></Route>
+      <Route path="/recipie-detail" exact component={RecipieDetail}/>
     </Switch>
   </div>
 );

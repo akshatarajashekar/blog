@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { setNavItem } from "../../components/header/headerReducer";
 import { useAppDispatch } from "../../hooks";
-import { setRecipieItem } from "../../components/recipie-detail/recipie-detail";
+import { setRecipieItem } from "../../components/recipie-detail/recipieDetail";
 
 const ContainerStyle = styled.div`
   display: flex;
@@ -110,9 +110,9 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
 
   const itemList = displayItemList.map((ele: CarouselListType, i: any) => {
     return (
-      <div key={ele.title}>
+      <div key={ele.title}  className={`${cssPrefix}__custom_link`}>
         <Link
-          className={`${cssPrefix}__custom_link`}
+         
           onClick={(event: React.MouseEvent) =>
             onClickEvent("recipie-detail", ele.title)
           }

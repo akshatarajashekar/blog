@@ -18,7 +18,7 @@ export const counterSlice = createSlice({
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
     setRecipieItem: (state, action: PayloadAction<string>) => {
-      state.selectedRecipieName = action.payload;
+      state.selectedRecipieName = action.payload
     },
   },
 });

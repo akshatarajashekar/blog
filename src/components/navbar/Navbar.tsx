@@ -3,7 +3,7 @@ import "./navbar.scss";
 import { NavTypeWrap, Navtype } from "../../common-types/types";
 import { setNavItem } from "../header/headerReducer";
 import { useAppDispatch } from "../../hooks";
-import { setRecipieItem } from "../../components/recipie-detail/recipie-detail";
+import { setRecipieItem } from "../../components/recipie-detail/recipieDetail";
 // import { useAppSelector } from "../../hooks";
 
 const Navbar = (props: NavTypeWrap) => {

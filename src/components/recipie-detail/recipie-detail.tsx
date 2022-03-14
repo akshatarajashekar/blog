@@ -1,5 +1,4 @@
 import "./recipie-detail.scss";
-
 import { useAppSelector } from "../../hooks";
 import { latestRecipieList } from "../../shared/data/recipieList.data";
 
