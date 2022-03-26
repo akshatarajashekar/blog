@@ -7,9 +7,15 @@ import { CardListPane } from "../shared/cardListPane";
 import { useAppSelector } from "../hooks";
 
 const AppMain = () => {
+  let recipieSelectedFromSession = '';
+  if ((sessionStorage.getItem('recipieName') !== null) && (sessionStorage.getItem('recipieName') !== undefined)) {
+    recipieSelectedFromSession = sessionStorage.getItem('recipieName') || '';
+  }
   const selectedRecipie = useAppSelector(
     (state) => state.recipieDetailStore.selectedRecipieName
   );
+  const selectedSessionName = recipieSelectedFromSession !== '' ? recipieSelectedFromSession : selectedRecipie;
+
   return (
     <div className="App">
       <ScrollBar>
@@ -17,7 +23,7 @@ const AppMain = () => {
           <Router>
             <Header />
             <CardListPane
-              title={selectedRecipie === "" ? "" : selectedRecipie}
+              title={selectedSessionName === null ? "" : selectedSessionName}
               skewLine={false}
             />
             <RouterIndex />

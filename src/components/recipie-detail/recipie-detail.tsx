@@ -4,12 +4,13 @@ import { latestRecipieList } from "../../shared/data/recipieList.data";
 
 const cssPrefix = "recipie-detail";
 const RecipieDetail = () => {
+  const recipieSelectedFromSession = sessionStorage.getItem('recipieName');
   const selectedRecipie = useAppSelector(
     (state) => state.recipieDetailStore.selectedRecipieName
   );
-
+  const selectedSessionName = recipieSelectedFromSession !== '' ? recipieSelectedFromSession : selectedRecipie;
   const fetchRecipieDetails = latestRecipieList.filter(
-    (ele: any) => ele.title === selectedRecipie
+    (ele: any) => ele.title === selectedSessionName
   )[0] || {
     imgPath: "",
     title: "",

@@ -27,6 +27,7 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
   const onClickEvent = (item: string, recipieTitle: string) => {
     console.log(recipieTitle, "recipieTitle");
     dispatch(setNavItem(item));
+    sessionStorage.setItem('recipieName', recipieTitle);
     dispatch(setRecipieItem(recipieTitle));
   };
 
