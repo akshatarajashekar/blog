@@ -103,7 +103,7 @@ const RecipieDetail = () => {
             process.env.PUBLIC_URL + "/assets/" + selectedRecipieDetail.imgPath
           })`,
         }}
-      ></div>s
+      ></div>
     </div>
   );
 };
