@@ -25,9 +25,8 @@ const cssPrefix = "carousel";
 const CarouselRecipieSlider = (props: CarouselListPropType) => {
   const dispatch = useAppDispatch();
   const onClickEvent = (item: string, recipieTitle: string) => {
-    console.log(recipieTitle, "recipieTitle");
     dispatch(setNavItem(item));
-    sessionStorage.setItem('recipieName', recipieTitle);
+    localStorage.setItem('recipieName', recipieTitle);
     dispatch(setRecipieItem(recipieTitle));
   };
 
@@ -44,11 +43,6 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
     let listOfItems: CarouselListType[] = [];
     const tempDataList = [...props.data];
     let flag = false;
-    console.log(
-      carouselLeftIndexNumber,
-      carouselRightIndexNumber,
-      "carouselLeftIndexNumber"
-    );
     for (
       let i = carouselLeftIndexNumber;
       i < carouselLeftIndexNumber + slides;
@@ -113,12 +107,10 @@ const CarouselRecipieSlider = (props: CarouselListPropType) => {
     return (
       <div key={ele.title}  className={`${cssPrefix}__custom_link`}>
         <Link
-         
           onClick={(event: React.MouseEvent) =>
             onClickEvent("recipie-detail", ele.title)
           }
-          to={"recipie-detail"}
-        >
+          to={"recipie-detail"}>
           <RecipieCard title={ele.title} image={ele.imgPath} />
         </Link>
       </div>

@@ -11,11 +11,11 @@ export const data: Navtype[] = [
     path: "/all-recipies",
     component: "Recipies",
   },
-  {
-    title: "About",
-    path: "/about",
-    component: "About",
-  },
+  // {
+  //   title: "About",
+  //   path: "/about",
+  //   component: "About",
+  // },
   {
     title: "Contact",
     path: "/contact",

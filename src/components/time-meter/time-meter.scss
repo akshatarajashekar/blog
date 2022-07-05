@@ -1,0 +1,14 @@
+.time-meter-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  justify-content: center;
+  padding-bottom: 20px;
+  &__borderStyle {
+    padding: 20px 10px;
+    border: 2px solid black;
+    text-align: center;
+  }
+  &__header {
+    font-weight: 700;
+  }
+}

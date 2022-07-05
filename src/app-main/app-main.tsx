@@ -5,16 +5,21 @@ import ScrollBar from "../shared/scroll-bar/scroll-bar";
 import Footer from "../components/footer/footer";
 import { CardListPane } from "../shared/cardListPane";
 import { useAppSelector } from "../hooks";
+import { useEffect, useState } from "react";
 
 const AppMain = () => {
-  let recipieSelectedFromSession = '';
-  if ((sessionStorage.getItem('recipieName') !== null) && (sessionStorage.getItem('recipieName') !== undefined)) {
-    recipieSelectedFromSession = sessionStorage.getItem('recipieName') || '';
-  }
   const selectedRecipie = useAppSelector(
     (state) => state.recipieDetailStore.selectedRecipieName
   );
-  const selectedSessionName = recipieSelectedFromSession !== '' ? recipieSelectedFromSession : selectedRecipie;
+
+  const [selectedStorageName, setSelectedStorageName] = useState('');
+  useEffect(() => {
+    const recipieSelectedFromSession = localStorage.getItem("recipieName") || '';
+    const name: string = localStorage.getItem("recipieName") !== ""
+    ? recipieSelectedFromSession
+    : selectedRecipie || '';
+    setSelectedStorageName(name);
+  }, [selectedStorageName, selectedRecipie]);
 
   return (
     <div className="App">
@@ -23,7 +28,7 @@ const AppMain = () => {
           <Router>
             <Header />
             <CardListPane
-              title={selectedSessionName === null ? "" : selectedSessionName}
+              title={selectedStorageName === null ? "" : selectedStorageName}
               skewLine={false}
             />
             <RouterIndex />
@@ -35,4 +40,5 @@ const AppMain = () => {
     </div>
   );
 };
+
 export default AppMain;
